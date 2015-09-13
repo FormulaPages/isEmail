@@ -1,0 +1,16 @@
+#+TITLE: formula-isemail
+
+#+BEGIN_SRC js :tangle ISEMAIL.es6
+  export default function ISEMAIL(email) {
+      var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+      return re.test(email);
+  };
+#+END_SRC
+
+
+#+BEGIN_SRC sh
+  babel ISEMAIL.es6 -m umd --out-file index.js
+#+END_SRC
+
+#+RESULTS:
+
